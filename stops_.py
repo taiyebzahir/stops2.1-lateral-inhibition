@@ -219,8 +219,11 @@ class Stops2:
     def _reception(self):
         # reception
         for i in range(self.pop.shape[0]):
+            # for every cell
             for j,k in enumerate(self.env[i]):
+                # for all type of ligand
                 for num_lig in range(int(k)):
+                    # for number of ligands
                     rnd_matrix=[numpy.random.random()]*len(self.env)
                     bool_matrix=(self.mul_mat[i]-rnd_matrix)>0
                     bool_matrix=(bool_matrix).astype(numpy.int32)
